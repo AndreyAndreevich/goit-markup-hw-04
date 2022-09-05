@@ -187,6 +187,11 @@ button {
 
 	background-color: var(--footer-bg-cl);
 	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../imeg/Img.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 1600px;
+	height: 600px;
+	margin: 0 auto;
 }
 .hero-tx {
 	width: 696px;
@@ -316,8 +321,8 @@ button {
 }
 .team-txt .list {
 	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
+	gap: 10px;
 	margin-top: 16px;
 }
 .team-socials-link {
@@ -327,7 +332,6 @@ button {
 
 	width: 44px;
 	height: 44px;
-	padding: 0;
 	color: var(--logo-company-color);
 
 	border-radius: 50%;
@@ -391,10 +395,14 @@ button {
 	border-right: 24px;
 	border: 1px solid #eeeeee;
 }
-.project-item:hover,
-.project-item:focus {
-	border: 1px solid #eeeeee;
+.project-link:hover,
+.project-link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project-link {
+	display: block;
+	text-decoration: none;
+	color: var(--main-txt-cl);
 }
 
 .project-title {
@@ -443,20 +451,17 @@ button {
 
 	width: 170px;
 	height: 90px;
-	--color3: var(--logo-company-color);
-	border: 1px solid var(--color3);
+	color: var(--logo-company-color);
+	border: 1px solid currentColor;
 	border-radius: 4px;
 }
 
 .clients-link:hover,
 .clients-link:focus {
-	--color3: var(--button-cl);
+	color: var(--button-cl);
 }
 .clients-icon {
-	fill: var(--logo-company-color);
-}
-.clients-link:hover .clients-icon {
-	fill: var(--button-cl);
+	fill: currentColor;
 }
 
 /*footer*/
@@ -505,7 +510,6 @@ button {
 	display: flex;
 }
 .footer-box-links {
-	padding-top: 12px;
 	margin-left: 70px;
 }
 .socials-item:not(:last-child) {
